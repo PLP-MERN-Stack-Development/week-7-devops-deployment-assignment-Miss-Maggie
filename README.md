@@ -1,78 +1,135 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19917619&assignment_repo_type=AssignmentRepo)
-# Deployment and DevOps for MERN Applications
+# 🖼️ Poster Maker
 
-This assignment focuses on deploying a full MERN stack application to production, implementing CI/CD pipelines, and setting up monitoring for your application.
+Poster Maker is a MERN (MongoDB, Express.js, React, Node.js) stack web application that allows users to register, login, and create stunning posters and fliers. It includes secure authentication, payment integration with Stripe, and a fully automated CI/CD deployment pipeline.
 
-## Assignment Overview
+---
 
-You will:
-1. Prepare your MERN application for production deployment
-2. Deploy the backend to a cloud platform
-3. Deploy the frontend to a static hosting service
-4. Set up CI/CD pipelines with GitHub Actions
-5. Implement monitoring and maintenance strategies
+## 🌐 Live URLs
 
-## Getting Started
+- **Frontend**: [https://poster-maker-client.vercel.app](https://poster-maker-client.vercel.app)
+- **Backend API**: [https://poster-maker-api.onrender.com](https://poster-maker-api.onrender.com)
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week7-Assignment.md` file
-4. Use the provided templates and configuration files as a starting point
+---
 
-## Files Included
+## 🛠️ Project Structure
 
-- `Week7-Assignment.md`: Detailed assignment instructions
-- `.github/workflows/`: GitHub Actions workflow templates
-- `deployment/`: Deployment configuration files and scripts
-- `.env.example`: Example environment variable templates
-- `monitoring/`: Monitoring configuration examples
+```
 
-## Requirements
+poster-maker/
+├── backend/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── tests/
+│   ├── app.js
+│   ├── server.js
+│   └── .env
+├── client/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   └── App.jsx
+│   └── vite.config.js
 
-- A completed MERN stack application from previous weeks
-- Accounts on the following services:
-  - GitHub
-  - MongoDB Atlas
-  - Render, Railway, or Heroku (for backend)
-  - Vercel, Netlify, or GitHub Pages (for frontend)
-- Basic understanding of CI/CD concepts
+````
 
-## Deployment Platforms
+---
 
-### Backend Deployment Options
-- **Render**: Easy to use, free tier available
-- **Railway**: Developer-friendly, generous free tier
-- **Heroku**: Well-established, extensive documentation
+## 🚀 Getting Started
 
-### Frontend Deployment Options
-- **Vercel**: Optimized for React apps, easy integration
-- **Netlify**: Great for static sites, good CI/CD
-- **GitHub Pages**: Free, integrated with GitHub
+### 🖥️ Frontend Setup
 
-## CI/CD Pipeline
+```bash
+cd client
+pnpm install
+pnpm run dev
+````
 
-The assignment includes templates for setting up GitHub Actions workflows:
-- `frontend-ci.yml`: Tests and builds the React application
-- `backend-ci.yml`: Tests the Express.js backend
-- `frontend-cd.yml`: Deploys the frontend to your chosen platform
-- `backend-cd.yml`: Deploys the backend to your chosen platform
+> Make sure the backend is running and CORS is configured properly.
 
-## Submission
+### ⚙️ Backend Setup
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+```bash
+cd backend
+pnpm install
+pnpm run dev
+```
 
-1. Complete all deployment tasks
-2. Set up CI/CD pipelines with GitHub Actions
-3. Deploy both frontend and backend to production
-4. Document your deployment process in the README.md
-5. Include screenshots of your CI/CD pipeline in action
-6. Add URLs to your deployed applications
+Ensure you have a `.env` file with:
 
-## Resources
+```env
+PORT=5000
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_jwt_secret
+STRIPE_SECRET_KEY=your_stripe_secret
+FRONTEND_URL=http://localhost:5173
+```
 
-- [GitHub Actions Documentation](https://docs.github.com/en/actions)
-- [MongoDB Atlas Documentation](https://docs.atlas.mongodb.com/)
-- [Render Documentation](https://render.com/docs)
-- [Railway Documentation](https://docs.railway.app/)
-- [Vercel Documentation](https://vercel.com/docs)
-- [Netlify Documentation](https://docs.netlify.com/) 
+---
+
+## 🧪 Testing
+
+* Backend tests use **Jest**, **Supertest**, and **MongoDB Memory Server**:
+
+```bash
+pnpm jest
+```
+
+* High coverage for:
+
+  * Authentication
+  * Poster creation
+  * Error handling
+
+---
+
+## 🔄 CI/CD Pipeline (Screenshots 📸)
+
+Below are screenshots of our automated pipeline in action:
+
+### ✅ GitHub Actions
+
+![CI Workflow](screenshots/github-ci.png)
+![Build & Deploy](screenshots/github-deploy.png)
+
+### 🚀 Render Deploy
+
+![Render Auto Deploy](screenshots/render-deploy.png)
+
+---
+
+## 📈 Monitoring Setup
+
+We used:
+
+* **UptimeRobot** for ping monitoring:
+
+  * Every 5 minutes check to backend & frontend endpoints
+* **Render Logs** for real-time error tracking
+* **GitHub Actions** for test failures and deployment logs
+
+---
+
+## ✍️ Features
+
+* 🔒 User Registration/Login
+* 💳 Stripe Subscription Checkout
+* 🖼️ Poster Creation & Management
+* 🧪 Unit & Integration Tests
+* 🔄 Automated CI/CD Deployment
+
+---
+
+## 📸 Screenshots
+
+| Login Page                      | Poster Dashboard                        |
+| ------------------------------- | --------------------------------------- |
+| ![Login](./poster-maker/frontend/public/Screenshots/Login.png) | ![Dashboard](./poster-maker/frontend/public/Screenshots/Dashboard.png) |
+
+---
+
+## 🤝 Contributors
+
+* 👩‍💻 Magdaline Muthui — [GitHub: Miss-Maggie](https://github.com/Miss-Maggie)
+
+---
