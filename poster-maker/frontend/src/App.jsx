@@ -47,7 +47,7 @@ const App = () => (
   <ErrorBoundary>
     {/* <ThemeProvider> */}
       {/* <QueryClientProvider client={queryClient}> */}
-        {/* <TooltipProvider> */}
+        <TooltipProvider>
           {/* <Toaster /> */}
           <Sonner />
           <BrowserRouter>
@@ -71,7 +71,7 @@ const App = () => (
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
-        {/* </TooltipProvider> */}
+        </TooltipProvider>
       {/* </QueryClientProvider> */}
     {/* </ThemeProvider> */}
   </ErrorBoundary>
