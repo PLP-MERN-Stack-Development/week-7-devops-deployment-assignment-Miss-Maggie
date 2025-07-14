@@ -90,6 +90,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.6.0
         version: 4.6.0(vite@7.0.4(jiti@2.4.2)(lightningcss@1.30.1))
+      '@vitejs/plugin-react-swc':
+        specifier: ^3.10.2
+        version: 3.10.2(vite@7.0.4(jiti@2.4.2)(lightningcss@1.30.1))
       '@vitest/coverage-v8':
         specifier: 3.2.4
         version: 3.2.4(vitest@3.2.4(jiti@2.4.2)(jsdom@26.1.0)(lightningcss@1.30.1))
@@ -813,6 +816,9 @@ packages:
       '@types/react-dom':
         optional: true
 
+  '@rolldown/pluginutils@1.0.0-beta.11':
+    resolution: {integrity: sha512-L/gAA/hyCSuzTF1ftlzUSI/IKr2POHsv1Dd78GfqkR83KMNuswWD61JxGV2L7nRwBBBSDr6R1gCkdTmoN7W4ag==}
+
   '@rolldown/pluginutils@1.0.0-beta.19':
     resolution: {integrity: sha512-3FL3mnMbPu0muGOCaKAhhFEYmqv9eTfPSJRJmANrCwtgK8VuxpsZDGK+m0LYAGoyO8+0j5uRe4PeyPDK1yA/hA==}
 
@@ -926,6 +932,81 @@ packages:
   '@stripe/stripe-js@7.4.0':
     resolution: {integrity: sha512-lQHQPfXPTBeh0XFjq6PqSBAyR7umwcJbvJhXV77uGCUDD6ymXJU/f2164ydLMLCCceNuPlbV9b+1smx98efwWQ==}
     engines: {node: '>=12.16'}
+
+  '@swc/core-darwin-arm64@1.12.14':
+    resolution: {integrity: sha512-HNukQoOKgMsHSETj8vgGGKK3SEcH7Cz6k4bpntCxBKNkO3sH7RcBTDulWGGHJfZaDNix7Rw2ExUVWtLZlzkzXg==}
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@swc/core-darwin-x64@1.12.14':
+    resolution: {integrity: sha512-4Ttf3Obtk3MvFrR0e04qr6HfXh4L1Z+K3dRej63TAFuYpo+cPXeOZdPUddAW73lSUGkj+61IHnGPoXD3OQYy4Q==}
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [darwin]
+
+  '@swc/core-linux-arm-gnueabihf@1.12.14':
+    resolution: {integrity: sha512-zhJOH2KWjtQpzJ27Xjw/RKLVOa1aiEJC2b70xbCwEX6ZTVAl8tKbhkZ3GMphhfVmLJ9gf/2UQR58oxVnsXqX5Q==}
+    engines: {node: '>=10'}
+    cpu: [arm]
+    os: [linux]
+
+  '@swc/core-linux-arm64-gnu@1.12.14':
+    resolution: {integrity: sha512-akUAe1YrBqZf1EDdUxahQ8QZnJi8Ts6Ya0jf6GBIMvnXL4Y6QIuvKTRwfNxy7rJ+x9zpzP1Vlh14ZZkSKZ1EGA==}
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [linux]
+
+  '@swc/core-linux-arm64-musl@1.12.14':
+    resolution: {integrity: sha512-ZkOOIpSMXuPAjfOXEIAEQcrPOgLi6CaXvA5W+GYnpIpFG21Nd0qb0WbwFRv4K8BRtl993Q21v0gPpOaFHU+wdA==}
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [linux]
+
+  '@swc/core-linux-x64-gnu@1.12.14':
+    resolution: {integrity: sha512-71EPPccwJiJUxd2aMwNlTfom2mqWEWYGdbeTju01tzSHsEuD7E6ePlgC3P3ngBqB3urj41qKs87z7zPOswT5Iw==}
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [linux]
+
+  '@swc/core-linux-x64-musl@1.12.14':
+    resolution: {integrity: sha512-nImF1hZJqKTcl0WWjHqlelOhvuB9rU9kHIw/CmISBUZXogjLIvGyop1TtJNz0ULcz2Oxr3Q2YpwfrzsgvgbGkA==}
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [linux]
+
+  '@swc/core-win32-arm64-msvc@1.12.14':
+    resolution: {integrity: sha512-sABFQFxSuStFoxvEWZUHWYldtB1B4A9eDNFd4Ty50q7cemxp7uoscFoaCqfXSGNBwwBwpS5EiPB6YN4y6hqmLQ==}
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [win32]
+
+  '@swc/core-win32-ia32-msvc@1.12.14':
+    resolution: {integrity: sha512-KBznRB02NASkpepRdWIK4f1AvmaJCDipKWdW1M1xV9QL2tE4aySJFojVuG1+t0tVDkjRfwcZjycQfRoJ4RjD7Q==}
+    engines: {node: '>=10'}
+    cpu: [ia32]
+    os: [win32]
+
+  '@swc/core-win32-x64-msvc@1.12.14':
+    resolution: {integrity: sha512-SymoP2CJHzrYaFKjWvuQljcF7BkTpzaS1vpywv7K9EzdTb5N8qPDvNd+PhWUqBz9JHBhbJxpaeTDQBXF/WWPmw==}
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [win32]
+
+  '@swc/core@1.12.14':
+    resolution: {integrity: sha512-CJSn2vstd17ddWIHBsjuD4OQnn9krQfaq6EO+w9YfId5DKznyPmzxAARlOXG99cC8/3Kli8ysKy6phL43bSr0w==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      '@swc/helpers': '>=0.5.17'
+    peerDependenciesMeta:
+      '@swc/helpers':
+        optional: true
+
+  '@swc/counter@0.1.3':
+    resolution: {integrity: sha512-e2BR4lsJkkRlKZ/qCHPw9ZaSxc0MVUd7gtbtaB7aMvHeJVYe8sOB8DBZkP2DtISHGSku9sCK6T6cnY0CtXrOCQ==}
+
+  '@swc/types@0.1.23':
+    resolution: {integrity: sha512-u1iIVZV9Q0jxY+yM2vw/hZGDNudsN85bBpTqzAQ9rzkxW9D+e3aEM4Han+ow518gSewkXgjmEK0BD79ZcNVgPw==}
 
   '@tailwindcss/node@4.1.11':
     resolution: {integrity: sha512-yzhzuGRmv5QyU9qLNg4GTlYI6STedBWRE7NjxP45CsFYYq9taI0zJXZBMqIC/c8fViNLhmrbpSFS57EoxUmD6Q==}
@@ -1085,6 +1166,11 @@ packages:
 
   '@types/react@18.3.23':
     resolution: {integrity: sha512-/LDXMQh55EzZQ0uVAZmKKhfENivEvWz6E+EYzh+/MCjMhNsotd+ZHhBGIjFDTi6+fz0OhQQQLbTgdQIxxCsC0w==}
+
+  '@vitejs/plugin-react-swc@3.10.2':
+    resolution: {integrity: sha512-xD3Rdvrt5LgANug7WekBn1KhcvLn1H3jNBfJRL3reeOIua/WnZOEV5qi5qIBq5T8R0jUDmRtxuvk4bPhzGHDWw==}
+    peerDependencies:
+      vite: ^4 || ^5 || ^6 || ^7.0.0-beta.0
 
   '@vitejs/plugin-react@4.6.0':
     resolution: {integrity: sha512-5Kgff+m8e2PB+9j51eGHEpn5kUzRKH2Ry0qGoe8ItJg7pqnkPrYPkDQZGgGmTa0EGarHrkjLvOdU3b1fzI8otQ==}
@@ -2843,6 +2929,8 @@ snapshots:
       '@types/react': 18.3.23
       '@types/react-dom': 18.3.7(@types/react@18.3.23)
 
+  '@rolldown/pluginutils@1.0.0-beta.11': {}
+
   '@rolldown/pluginutils@1.0.0-beta.19': {}
 
   '@rollup/rollup-android-arm-eabi@4.45.0':
@@ -2913,6 +3001,58 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
 
   '@stripe/stripe-js@7.4.0': {}
+
+  '@swc/core-darwin-arm64@1.12.14':
+    optional: true
+
+  '@swc/core-darwin-x64@1.12.14':
+    optional: true
+
+  '@swc/core-linux-arm-gnueabihf@1.12.14':
+    optional: true
+
+  '@swc/core-linux-arm64-gnu@1.12.14':
+    optional: true
+
+  '@swc/core-linux-arm64-musl@1.12.14':
+    optional: true
+
+  '@swc/core-linux-x64-gnu@1.12.14':
+    optional: true
+
+  '@swc/core-linux-x64-musl@1.12.14':
+    optional: true
+
+  '@swc/core-win32-arm64-msvc@1.12.14':
+    optional: true
+
+  '@swc/core-win32-ia32-msvc@1.12.14':
+    optional: true
+
+  '@swc/core-win32-x64-msvc@1.12.14':
+    optional: true
+
+  '@swc/core@1.12.14':
+    dependencies:
+      '@swc/counter': 0.1.3
+      '@swc/types': 0.1.23
+    optionalDependencies:
+      '@swc/core-darwin-arm64': 1.12.14
+      '@swc/core-darwin-x64': 1.12.14
+      '@swc/core-linux-arm-gnueabihf': 1.12.14
+      '@swc/core-linux-arm64-gnu': 1.12.14
+      '@swc/core-linux-arm64-musl': 1.12.14
+      '@swc/core-linux-x64-gnu': 1.12.14
+      '@swc/core-linux-x64-musl': 1.12.14
+      '@swc/core-win32-arm64-msvc': 1.12.14
+      '@swc/core-win32-ia32-msvc': 1.12.14
+      '@swc/core-win32-x64-msvc': 1.12.14
+
+  '@swc/counter@0.1.3': {}
+
+  '@swc/types@0.1.23':
+    dependencies:
+      '@swc/counter': 0.1.3
 
   '@tailwindcss/node@4.1.11':
     dependencies:
@@ -3066,6 +3206,14 @@ snapshots:
     dependencies:
       '@types/prop-types': 15.7.15
       csstype: 3.1.3
+
+  '@vitejs/plugin-react-swc@3.10.2(vite@7.0.4(jiti@2.4.2)(lightningcss@1.30.1))':
+    dependencies:
+      '@rolldown/pluginutils': 1.0.0-beta.11
+      '@swc/core': 1.12.14
+      vite: 7.0.4(jiti@2.4.2)(lightningcss@1.30.1)
+    transitivePeerDependencies:
+      - '@swc/helpers'
 
   '@vitejs/plugin-react@4.6.0(vite@7.0.4(jiti@2.4.2)(lightningcss@1.30.1))':
     dependencies:
