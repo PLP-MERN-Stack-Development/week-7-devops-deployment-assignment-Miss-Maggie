@@ -7,7 +7,7 @@ Poster Maker is a MERN (MongoDB, Express.js, React, Node.js) stack web applicati
 ## 🌐 Live URLs
 
 - **Frontend**: [https://poster-maker-client.vercel.app](https://poster-maker-client.vercel.app)
-- **Backend API**: [https://poster-maker-api.onrender.com](https://poster-maker-api.onrender.com)
+- **Backend API**: [https://week-7-devops-deployment-assignment-2n8d.onrender.com](https://poster-maker-api.onrender.com)
 
 ---
 
