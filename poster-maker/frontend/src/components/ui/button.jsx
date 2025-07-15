@@ -1,10 +1,7 @@
-const React = require("react");
-const SlotModule = require("@radix-ui/react-slot");
-const { cva } = require("class-variance-authority");
-const { cn } = require("@/lib/utils");
-
-// Safely extract Slot (handles named/default exports)
-const Slot = SlotModule?.Slot || SlotModule?.default || SlotModule;
+import React from "react";
+import { Slot } from "@radix-ui/react-slot";
+import { cva } from "class-variance-authority";
+import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
@@ -34,7 +31,7 @@ const buttonVariants = cva(
 
 const Button = React.forwardRef(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
-    const Comp = asChild && Slot ? Slot : "button";
+    const Comp = asChild ? Slot : "button";
     return (
       <Comp
         type={!asChild ? "button" : undefined}
@@ -48,7 +45,4 @@ const Button = React.forwardRef(
 
 Button.displayName = "Button";
 
-module.exports = {
-  Button,
-  buttonVariants,
-};
+export { Button, buttonVariants };
