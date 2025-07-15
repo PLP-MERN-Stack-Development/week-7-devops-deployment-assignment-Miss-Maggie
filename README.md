@@ -6,7 +6,7 @@ Poster Maker is a MERN (MongoDB, Express.js, React, Node.js) stack web applicati
 
 ## 🌐 Live URLs
 
-- **Frontend**: [https://poster-maker-client.vercel.app](https://poster-maker-client.vercel.app)
+- **Frontend**: [https://week-7-devops-deployment-assig-git-463d3b-miss-maggies-projects.vercel.app/](https://poster-maker-client.vercel.app)
 - **Backend API**: [https://week-7-devops-deployment-assignment-2n8d.onrender.com](https://poster-maker-api.onrender.com)
 
 ---
@@ -85,18 +85,25 @@ pnpm jest
 
 ## 🔄 CI/CD Pipeline (Screenshots 📸)
 
+## Frontend:
+- Deployed on Vercel.
+- Connected directly to GitHub repository.
+- Every push to the main branch automatically triggers a build and deployment.
+- Uses Vite as the build tool.
+
+## Backend:
+- Deployed on Render.
+- GitHub integration enabled.
+- Each commit triggers build → install dependencies → run server.js.
+- MongoDB Atlas is used for persistent data storage.
+
+
+
 Below are screenshots of our automated pipeline in action:
 
-### ✅ GitHub Actions
+![Backend](./poster-maker/frontend/public/Screenshots/Backend.png)
+![Frontend](./poster-maker/frontend/public/Screenshots/Frontend.png)
 
-![CI Workflow](screenshots/github-ci.png)
-![Build & Deploy](screenshots/github-deploy.png)
-
-### 🚀 Render Deploy
-
-![Render Auto Deploy](screenshots/render-deploy.png)
-
----
 
 ## 📈 Monitoring Setup
 
