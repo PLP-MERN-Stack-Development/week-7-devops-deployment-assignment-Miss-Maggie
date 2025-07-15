@@ -7,10 +7,24 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
-     'react-dom': path.resolve(__dirname, 'node_modules/react-dom'),
-
-    },                                                                                                                                                                                                                                                                                                                                                                                                                                    
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
+  build: {
+    rollupOptions: {
+      external: [
+        '@radix-ui/react-slot',
+        '@radix-ui/react-tooltip',
+        '@radix-ui/react-avatar',
+        '@radix-ui/react-dialog',
+        '@radix-ui/react-dropdown-menu',
+        '@radix-ui/react-label',
+        '@radix-ui/react-separator',
+        '@radix-ui/react-switch',
+        '@radix-ui/react-tabs',
+        '@radix-ui/react-toast',
+      ],
+    },
   },
   test: {
     globals: true,
